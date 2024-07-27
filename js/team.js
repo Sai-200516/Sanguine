@@ -15,8 +15,8 @@ const clubHeads = [
         position: "CEO",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/sai2005/" },
-            { platform: "discord", url: "https://github.com/sai-200516" },
-            { platform: "github", url: "https://discordapp.com/users/1150473624092934254" },
+            { platform: "discord", url: "https://discordapp.com/users/1150473624092934254" },
+            { platform: "github", url: "https://github.com/sai-200516 " },
         ],
     },
     {
