@@ -1,0 +1,194 @@
+:root{
+    --white:rgb(207, 185, 228);
+    --black: #020d19;
+    --light-black:#1a2930;
+    --gold:gold;
+  }
+
+.header-1{
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.header-1 h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: slideInFromLeft 1.5s ease-out;
+    color: var(--gold);
+}
+
+.header-1 p {
+    font-size: 1.2em;
+    margin: 10px 0 20px 0;
+    animation: slideInFromRight 1.5s ease-out;
+    color: #555;
+}
+
+.header-1 button,.events button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: var(--white);
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: var(--black);
+    font-weight: bold;
+}
+.events button a{
+    text-decoration:none;
+    font-weight: bold;
+}
+
+.header-1 button:hover,.events button:hover {
+    background-color: #ff7f00;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--gold   );
+    transition: transform 0.3s;
+}
+.section h2:hover{
+    font-size: 2.7em;
+    
+}
+.section p{
+    color: var(--white);
+    text-align: center;
+    padding: 0 5%;
+}
+
+.about, .mission, .values, .events, .team, .heads {
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.values li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.event-cards, .team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    flex-wrap: wrap;
+    
+}
+
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1.5s ease-out;
+    background-color: #010a16;
+    border: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.card img {
+    border-radius: 15px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: var(--gold);
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px var(--white);
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes zoom {
+    0% { font-size: 2.5em; }
+    100% { opacity: 2.8em; }
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+/* Subscribe Box open */
+.subscribe form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.subscribe form input, .subscribe form button {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.subscribe form button {
+    background-color: #ffa500;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe form button:hover {
+    background-color: #ff7f00;
+}
+/* Subscribe Box Close*/

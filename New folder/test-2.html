@@ -1,144 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Amfoss Team</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #000000;
-  color: #FFFF00;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #000000;
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav {
-  background-color: #000000;
-  overflow: hidden;
-}
-
-nav a {
-  float: left;
-  color: #FFFF00;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-nav a:hover {
-  background-color: #111111;
-}
-
-.container {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.team-member {
-  display: inline-block;
-  margin: 20px;
-  text-align: left;
-  width: 250px;
-}
-
-.team-member img {
-  width: 100%;
-  border-radius: 50%;
-}
-
-.team-member h3 {
-  margin-top: 10px;
-}
-
-.team-member p {
-  margin-bottom: 0;
-}
-
-footer {
-  background-color: #111111;
-  text-align: center;
-  padding: 10px 0;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #FFFF00;
-  font-size: 24px;
-}
-
-.social-links a:hover {
-  color: #FFA500;
-}
-
-.read-more {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #FFFF00;
-  color: #000000;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 20px;
-}
-
-.read-more:hover {
-  background-color: #FFA500;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanguine Club Events</title>
+    <link rel="stylesheet" href="test-2.css">
 </head>
 <body>
-
-<header>
-  <h1>Amfoss Team</h1>
-</header>
-
-<nav>
-  <a href="#">About</a>
-  <a href="#">Achievements</a>
-  <a href="#">Club Life</a>
-  <a href="#">Team</a>
-  <a href="#">Gallery</a>
-</nav>
-
-<div class="container">
-  <h2>Meet the Team</h2>
-
-  <div class="team-member">
-    <img src="https://www.amfoss.in/images/team/team_member.jpg" alt="Team Member">
-    <h3>Team Member Name</h3>
-    <p>Designation</p>
-  </div>
-
-  <div class="team-member">
-    <img src="https://www.amfoss.in/images/team/team_member.jpg" alt="Team Member">
-    <h3>Team Member Name</h3>
-    <p>Designation</p>
-  </div>
-
-  <div class="team-member">
-    <img src="https://www.amfoss.in/images/team/team_member.jpg" alt="Team Member">
-    <h3>Team Member Name</h3>
-    <p>Designation</p>
-  </div>
-  
-  <a href="#" class="read-more">Read More</a>
-
-</div>
-
-<footer>
-  <div class="social-links">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-  </div>
-  <p>&copy; 2023 Amfoss</p>
-</footer>
-
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Sanguine Club</h1>
+            <p class="hero-subtitle">Your Premier Event Destination</p>
+            <a href="#events" class="btn">See Event Schedule</a>
+        </div>
+    </header>
+    <section id="events" class="events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="event-card">
+                <img src="https://example.com/live-music.jpg" alt="Live Music Night">
+                <div class="event-info">
+                    <h3>Live Music Night</h3>
+                    <p>Date: August 10, 2024</p>
+                    <p>Time: 8:00 PM</p>
+                    <p>Description: Enjoy a night of live music with local bands and artists.</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="https://example.com/comedy-show.jpg" alt="Comedy Show">
+                <div class="event-info">
+                    <h3>Comedy Show</h3>
+                    <p>Date: August 17, 2024</p>
+                    <p>Time: 7:00 PM</p>
+                    <p>Description: Laugh out loud with some of the best stand-up comedians.</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="https://example.com/dj-night.jpg" alt="DJ Night">
+                <div class="event-info">
+                    <h3>DJ Night</h3>
+                    <p>Date: August 24, 2024</p>
+                    <p>Time: 9:00 PM</p>
+                    <p>Description: Dance the night away with top DJs spinning the latest hits.</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="https://example.com/wine-tasting.jpg" alt="Wine Tasting">
+                <div class="event-info">
+                    <h3>Wine Tasting</h3>
+                    <p>Date: August 31, 2024</p>
+                    <p>Time: 6:00 PM</p>
+                    <p>Description: Experience an evening of fine wines and gourmet appetizers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>

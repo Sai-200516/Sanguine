@@ -1,0 +1,171 @@
+/* Reset CSS */
+:root{
+    --white:rgb(207, 185, 228);
+    --black: #020d19;
+    --light-black:#1a2930;
+    --gold:gold;
+  }
+
+.header-2 {
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.header-2 h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: slideInFromLeft 1.5s ease-out;
+    color: var(--gold);
+}
+
+.header-2 p {
+    font-size: 1.2em;
+    margin: 10px 0 20px 0;
+    animation: slideInFromRight 1.5s ease-out;
+    color: var(--white);
+}
+
+.header-2 .social-links {
+    margin-top: 20px;
+    animation: fadeIn 2.5s ease-out;
+}
+
+.header-2 .social-links a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.header-2 .social-links a:hover {
+    color: #ffa500;
+}
+.form-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.form-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color:var(--white)
+}
+
+.form-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.form-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.form-section ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+    border-radius: 10px;
+
+}
+
+#join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+#join-form label {
+    font-size: 1.2em;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    color: var(--gold);
+}
+
+#join-form input, #join-form select, #join-form button {
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#join-form input, #join-form select {
+    background-color: #ccc;
+    color: #000;
+    animation: slideInFromBottom 1.5s ease-out;
+    
+}
+
+#join-form input:focus, #join-form select:focus {
+    outline: none;
+    border: 2px solid #ffa500;
+}
+
+#join-form button {
+    background-color: #ffa500;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeIn 2.5s ease-out;
+}
+
+#join-form button:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-2 {
+        font-size: 2em;
+    }
+
+    .header-2 p {
+        font-size: 1em;
+    }
+
+    .section h2 {
+        font-size: 2em;
+    }
+
+    .section p, .section ul li {
+        font-size: 1em;
+    }
+
+    #join-form label, #join-form input, #join-form select, #join-form button {
+        max-width: 100%;
+    }
+}

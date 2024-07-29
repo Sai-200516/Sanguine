@@ -1,0 +1,217 @@
+/* Reset CSS */
+:root{
+    --white:rgb(207, 185, 228);
+    --black: #020d19;
+    --light-black:#1a2930;
+    --gold:rgb(195, 174, 50);
+  }
+.header-3 {
+    text-align: center;
+    padding: 20px 20px;
+    animation: fadeIn 2s ease-out;
+    
+}
+
+.header-3 h1 {  
+    font-size:2em;
+    margin: 0;
+    animation: slideInFromLeft 1.5s ease-out;
+    color: var(--gold);
+}
+
+.header-3_p {
+    font-size: 0.9em;
+    margin: 0 0 0 0;
+    animation: slideInFromRight 1.5s ease-out;
+    color: var(--white);
+}
+.header-3_pp{
+    font-size: 1em;
+    margin: 0 0 0 0;    
+    color: var(--white);   
+}
+
+.header-3 {
+    animation: fadeIn 2.5s ease-out;
+}
+
+.header-3  {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.header-3 {
+    color: #ffa500;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: url('../source/pexels-vishnurnair-1105666.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+}
+
+.details-section, .form-section {
+    background-color: transparent;
+    padding: 20px;
+
+    flex: 1;
+    margin: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+.details-section h2, .form-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+    color:var(--gold);
+    text-align:center;
+}
+
+.details-section p, .details-section ul, .form-section form {
+    animation: fadeIn 2s ease-out;
+}
+
+.details-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.details-section ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: center;
+    
+}
+
+#event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);  
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20px 0; 
+}
+
+#event-form label {
+    font-size: 1.2em;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+    
+}
+
+#event-form input, #event-form select, #event-form button {
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    max-width: 400px;
+}
+
+#event-form input, #event-form select {
+    background-color: #fff;
+    color: #333;
+    animation: slideInFromBottom 1.5s ease-out;
+}
+
+#event-form input:focus, #event-form select:focus {
+    outline: none;
+    border: 2px solid #ffa500;
+}
+
+#event-form button {
+    background-color: #ffa500;
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeIn 2.5s ease-out;
+}
+
+#event-form button:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-3 h1 {
+        font-size: 1em;
+    }
+
+    .header-3 p {
+        font-size: 0.5em;
+    }
+
+    .details-section, .form-section {
+        margin: 5px 0;
+    }
+
+    .details-section h2, .form-section h2 {
+        font-size: 1.5em;
+    }
+
+    .details-section p, .details-section ul li {
+        font-size: 1em;
+    }
+
+    #event-form label, #event-form input, #event-form select, #event-form button {
+        max-width: 100%;
+    }
+    #event-form{
+        padding: 20px;
+    }
+}

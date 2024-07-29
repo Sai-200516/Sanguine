@@ -25,7 +25,7 @@ const clubHeads = [
         position: "CO-CEO",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/agam-jindal-379352298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/912524096741445684" },
             { platform: "github", url: "https://github.com/Agam3705" },
         ],
     },
@@ -35,7 +35,7 @@ const clubHeads = [
         position: "CTO",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/hemantsri" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/699221301868363787" },
             { platform: "github", url: "https://github.com/Hemant5104" },
         ],
     },
@@ -58,7 +58,7 @@ const coreTeam = [
         position: "Meeting Management Lead",
         social: [
             { platform: "linkedin", url: "www.linkedin.com/in/kumari-kriti-singh-05a809284" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discord.com/users/1224005783105048758" },
             { platform: "github", url: "https://github.com/kritisingh7488" },
         ],
     },
@@ -68,7 +68,7 @@ const coreTeam = [
         position: "Technical Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/thearadi" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/918585292905152623" },
             { platform: "github", url: "https://github.com/thearadi15" },
         ],
     },
