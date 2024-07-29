@@ -24,7 +24,7 @@ const clubHeads = [
         name: "Agam Jindal",
         position: "CO-CEO",
         social: [
-            { platform: "linkedin", url: "https://www.linkedin.com/in/agam-jindal-379352298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+            { platform: "linkedin", url: "https://www.linkedin.com/in/agam-jindal-379352298" },
             { platform: "discord", url: "https://discordapp.com/users/912524096741445684" },
             { platform: "github", url: "https://github.com/Agam3705" },
         ],
@@ -73,12 +73,12 @@ const coreTeam = [
         ],
     },
     {
-        imgSrc: "../source/members/",
+        imgSrc: "../source/members/Aalok Kumar Yadav.jpg",
         name: "Aalok Kumar Yadav",
         position: "Technical Co-Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/aalokk" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discord.com/users/709643330710929440" },
             { platform: "github", url: "https://github.com/aalok2006" },
         ],
     },
@@ -93,12 +93,12 @@ const coreTeam = [
         ],
     },
     {
-        imgSrc: "../source/members/",
+        imgSrc: "../source/members/Agrim Sing.jpg",
         name: "Agrim Singh",
         position: "Event Management Co-Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/agrimsingh1224" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/1267353965050462312" },
             { platform: "github", url: "https://github.com/agrimsingh7117" },
         ],
     },
@@ -128,7 +128,7 @@ const coreTeam = [
         position: "Content Creater Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/peshal-mishra-922355293" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/1032330892745654364" },
             { platform: "github", url: "https://github.com/hacksmith0" },
         ],
     },
@@ -138,17 +138,17 @@ const coreTeam = [
         position: "Marketing and Promotions Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/aman-singh-a564a1283" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/1165651008874102878" },
             { platform: "github", url: "https://github.com/Amansingh1602" },
         ],
     },
     {
-        imgSrc: "https://via.placeholder.com/150",
+        imgSrc: "../source/members/Barla jaswanth.jpg",
         name: "Barla Jaswanth",
         position: "Photography Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/barla-jaswanth" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discord.com/users/1209019417233719317" },
             { platform: "github", url: "https://github.com/barlajaswanth123" },
         ],
     },
@@ -158,7 +158,7 @@ const coreTeam = [
         position: "Public Speaking Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/kalpana-neginal/" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/1214570543550832722" },
             { platform: "github", url: "https://github.com/Kalpana2204" },
         ],
     },
