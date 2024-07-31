@@ -40,13 +40,13 @@ const clubHeads = [
         ],
     },
     {
-        imgSrc: "https://via.placeholder.com/150",
+        imgSrc: "../source/members/Krishna Singhal.jpg",
         name: "Krishna Singhal",
         position: "CFO",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/krishnasinghal25" },
-            { platform: "discord", url: "#" },
-            { platform: "github", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/1198303957710295120" },
+            { platform: "github", url: "https://github.com/Krishnasinghal25" },
         ],
     },
 ];
@@ -88,7 +88,7 @@ const coreTeam = [
         position: "Event Management Lead",
         social: [
             { platform: "linkedin", url: "www.linkedin.com/in/mohit goyal658" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "http://discordapp.com/users/1178650609621151875" },
             { platform: "github", url: "https://github.com/Mohitagarwal123" },
         ],
     },
@@ -108,7 +108,7 @@ const coreTeam = [
         position: "Graphic Designing Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/chandanyadav426" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/1209081531939946527" },
             { platform: "github", url: "https://github.com/chandan91077" },
         ],
     },
@@ -118,7 +118,7 @@ const coreTeam = [
         position: "Graphic Designing Co-Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/yukta-shree-3b2398277/" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/889375896723673098" },
             { platform: "github", url: "https://github.com/Yukta233" },
         ],
     },
@@ -168,7 +168,7 @@ const coreTeam = [
         position: "Public Speaking Co-Lead",
         social: [
             { platform: "linkedin", url: "https://www.linkedin.com/in/aman188/" },
-            { platform: "discord", url: "#" },
+            { platform: "discord", url: "https://discordapp.com/users/1267008083943489639" },
             { platform: "github", url: "https://github.com/aman-hood" },
         ],
     },
