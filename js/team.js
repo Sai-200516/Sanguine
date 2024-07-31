@@ -153,7 +153,7 @@ const coreTeam = [
         ],
     },
     {
-        imgSrc: "../source/members/kalpana_Negiwal.jpg",
+        imgSrc: "../source/members/kalpana_negiwal.jpg",
         name: "Kalpana neginal",
         position: "Public Speaking Lead",
         social: [

@@ -1,187 +1,511 @@
-body {
+/* Reset CSS */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
-    color: #ffffff;
-    background: #1b1b1b;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
 }
 
-.hero {
-    height: 100vh;
-    background: url('https://example.com/club-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-out;
 }
 
-.hero .container {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
-    border-radius: 10px;
-    animation: fadeIn 2s ease-in-out;
+.header h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: slideInFromLeft 1.5s ease-out;
 }
 
-.hero-title {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    animation: slideInDown 1s ease-in-out;
+.header p {
+    font-size: 1.2em;
+    margin: 10px 0 20px 0;
+    animation: slideInFromRight 1.5s ease-out;
 }
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    animation: slideInUp 1s ease-in-out;
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 2.5s ease-out;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #e91e63;
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin: 0.5rem;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
-.btn:hover {
-    background-color: #ff4081;
+.nav ul li a:hover {
+    color: #ffa500;
 }
 
-.events {
-    padding: 2rem;
-    background: #282828;
+.section {
+    padding: 50px 20px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-.events h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    animation: fadeIn 2s ease-in-out;
+.about-section, .events-section, .subscribe-section, .sponsors-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.event-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.about-section h2, .events-section h2, .subscribe-section h2, .sponsors-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.about-section p, .events-section p, .subscribe-section p, .sponsors-section p {
+    font-size: 1.2em;
+    animation: fadeIn 2s ease-out;
 }
 
 .event-card {
-    display: flex;
-    flex-direction: column;
-    background: #333;
-    padding: 1.5rem;
-    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
-    animation: fadeInUp 1s ease-in-out;
-    transition: transform 0.3s ease;
+    padding: 0;
+    width: 50%;
+    margin: 0 auto;
+    animation: slideInFromBottom 1.5s ease-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.event-card:hover {
-    transform: scale(1.05);
-}
-
-.event-card img {
+.event-video {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    animation: fadeIn 1s ease-in-out;
+    height: auto;
+    border-bottom: 2px solid #ffa500;
 }
 
-.event-info {
+.event-details {
+    padding: 20px;
+}
+
+.event-details h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+.event-details p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: slideInFromRight 1.5s ease-out;
+}
+
+.event-details button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-details button:hover {
+    background-color: #ff4500;
+}
+
+.join-section p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-out;
+}
+
+.join-button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #ff4500;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.contact-details {
+    flex: 1;
     text-align: left;
 }
 
-.event-info h3 {
-    margin-top: 0;
-    font-size: 1.75rem;
+.contact-details h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
 }
 
-.event-info p {
-    margin: 0.5rem 0;
+.contact-details p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-out;
 }
 
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
+.contact-section form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+.contact-section form input,
+.contact-section form textarea {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    margin-bottom: 10px;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
+.contact-section form button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section form button:hover {
+    background-color: #ff4500;
+}
+/* ... other CSS ... */
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px 20px;
     text-align: center;
 }
 
-.modal-content img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
+.testimonials-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
     color: #000;
-    text-decoration: none;
+}
+
+.testimonials-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+}
+
+.testimonial {
+    flex: 0 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.testimonial img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Scroll buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
     cursor: pointer;
+    z-index: 1;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.scroll-button.left {
+    left: 10px;
 }
 
-@keyframes slideInDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
+.scroll-button.right {
+    right: 10px;
 }
 
-@keyframes slideInUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
+/* Media Queries */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
+    .testimonials-section h2 {
+        font-size: 2em;
     }
 
-    .hero-subtitle {
-        font-size: 1rem;
+    .testimonial {
+        min-width: 150px;
+        max-width: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.subscribe-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+.subscribe-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    width: 250px;
+}
+
+.subscribe-section button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-section button:hover {
+    background-color: #ff4500;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.sponsor-logos img {
+    max-width: 150px;
+    height: auto;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease-out;
+}
+
+.footer .social-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer .social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #ffa500;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5em;
     }
 
-    .btn {
-        font-size: 0.875rem;
-        padding: 0.5rem 1rem;
+    .header p {
+        font-size: 1em;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .event-card {
-        width: 90%;
+        width: 80%;
+    }
+
+    .footer .social-links {
+        gap: 5px;
+    }
+
+    .sponsor-logos img {
+        max-width: 100px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-details, .contact-section form {
+        width: 100%;
+        text-align: center;
     }
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* ... other CSS ... */
+
+/* Subscribe Section */
+.subscribe-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.subscribe-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.subscribe-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+.subscribe-section input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    width: 300px;
+}
+
+.subscribe-section button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-section button:hover {
+    background-color: #ff4500;
+}
+
+/* ... other CSS ... */
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* ... other media queries ... */
+
+    .subscribe-section input {
+        width: 250px;
+    }
+}
+

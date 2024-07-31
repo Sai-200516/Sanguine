@@ -1,120 +1,74 @@
-const events = [
-    {
-        title: "Live Music Night",
-        date: "2024-08-10",
-        time: "8:00 PM",
-        description: "Enjoy a night of live music with local bands and artists.",
-        image: "https://example.com/live-music.jpg",
-        gallery: [
-            "../source/pexels-vishnurnair-1105666.jpg",
-            "https://example.com/gallery/live-music-2.jpg",
-            "https://example.com/gallery/live-music-3.jpg"
-        ]
-    },
-    {
-        title: "Comedy Show",
-        date: "2024-08-17",
-        time: "7:00 PM",
-        description: "Laugh out loud with some of the best stand-up comedians.",
-        image: "https://example.com/comedy-show.jpg",
-        gallery: [
-            "https://example.com/gallery/comedy-show-1.jpg",
-            "https://example.com/gallery/comedy-show-2.jpg",
-            "https://example.com/gallery/comedy-show-3.jpg"
-        ]
-    },
-    {
-        title: "DJ Night",
-        date: "2024-08-24",
-        time: "9:00 PM",
-        description: "Dance the night away with top DJs spinning the latest hits.",
-        image: "https://example.com/dj-night.jpg",
-        gallery: [
-            "https://example.com/gallery/dj-night-1.jpg",
-            "https://example.com/gallery/dj-night-2.jpg",
-            "https://example.com/gallery/dj-night-3.jpg"
-        ]
-    },
-    {
-        title: "Wine Tasting",
-        date: "2024-08-31",
-        time: "6:00 PM",
-        description: "Experience an evening of fine wines and gourmet appetizers.",
-        image: "https://example.com/wine-tasting.jpg",
-        gallery: [
-            "https://example.com/gallery/wine-tasting-1.jpg",
-            "https://example.com/gallery/wine-tasting-2.jpg",
-            "https://example.com/gallery/wine-tasting-3.jpg"
-        ]
-    },
-    {
-        title: "Past Event 1",
-        date: "2024-07-01",
-        time: "6:00 PM",
-        description: "This is a past event.",
-        image: "https://example.com/past-event-1.jpg",
-        gallery: [
-            "../source/pexels-vishnurnair-1105666.jpg",
-            "https://example.com/gallery/past-event-1-2.jpg",
-            "https://example.com/gallery/past-event-1-3.jpg"
-        ]
-    },
-    {
-        title: "Past Event 2",
-        date: "2024-07-08",
-        time: "7:00 PM",
-        description: "This is another past event.",
-        image: "https://example.com/past-event-2.jpg",
-        gallery: [
-            "https://example.com/gallery/past-event-2-1.jpg",
-            "https://example.com/gallery/past-event-2-2.jpg",
-            "https://example.com/gallery/past-event-2-3.jpg"
-        ]
-    }
-];
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scroll for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-const today = new Date().toISOString().split('T')[0];
+    // Contact form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message!');
+        this.reset();
+    });
 
-const upcomingEventsContainer = document.getElementById('upcoming-events');
-const pastEventsContainer = document.getElementById('past-events');
-const modal = document.getElementById('gallery-modal');
-const modalContent = document.getElementById('modal-content');
-const closeModal = document.getElementsByClassName('close')[0];
+    // Subscribe form submission
+    document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for subscribing, ' + document.getElementById('subscribe-name').value + '!');
+        this.reset();
+    });
 
-function openModal(gallery) {
-    modalContent.innerHTML = gallery.map(image => `<img src="${image}" alt="Gallery Image">`).join('');
-    modal.style.display = "block";
-}
+    // Add sample testimonials dynamically
+    const testimonials = [
+        { name: "John Doe", text: "Amazing club with great events!", photo: "../source/members/kalpana_negiwal.jpg" },
+        { name: "Jane Smith", text: "Had an awesome time at the DJ Night!", photo: "jane.jpg" },
+        { name: "Sam Wilson", text: "A wonderful community to be part of.", photo: "sam.jpg" },
+        // Add more testimonials as needed
+    ];
+    const testimonialsSlider = document.querySelector('.testimonials-slider');
+    testimonials.forEach(testimonial => {
+        const div = document.createElement('div');
+        div.classList.add('testimonial');
+        div.innerHTML = `<img src="${testimonial.photo}" alt="${testimonial.name}"><p>${testimonial.text}</p><p>- ${testimonial.name}</p>`;
+        testimonialsSlider.appendChild(div);
+    });
 
-function closeModalFunction() {
-    modal.style.display = "none";
-}
+    // Add sample sponsors dynamically
+    const sponsors = [
+        "sponsor1.png",
+        "sponsor2.png",
+        "sponsor3.png"
+    ];
+    const sponsorLogos = document.getElementById('sponsor-logos');
+    sponsors.forEach(sponsor => {
+        const img = document.createElement('img');
+        img.src = sponsor;
+        img.alt = `Sponsor Logo`;
+        sponsorLogos.appendChild(img);
+    });
 
-closeModal.onclick = closeModalFunction;
-window.onclick = function(event) {
-    if (event.target == modal) {
-        closeModalFunction();
-    }
-};
+    // Scroll buttons functionality
+    const scrollAmount = 300;
+    const leftButton = document.createElement('button');
+    leftButton.classList.add('scroll-button', 'left');
+    leftButton.innerHTML = '&larr;';
+    testimonialsSlider.insertAdjacentElement('beforebegin', leftButton);
 
-events.forEach(event => {
-    const eventCard = document.createElement('div');
-    eventCard.classList.add('event-card');
-    eventCard.innerHTML = `
-        <img src="${event.image}" alt="${event.title}">
-        <div class="event-info">
-            <h3>${event.title}</h3>
-            <p>Date: ${new Date(event.date).toDateString()}</p>
-            <p>Time: ${event.time}</p>
-            <p>${event.description}</p>
-            <a href="#" class="btn" onclick="openModal(${JSON.stringify(event.gallery)})">Gallery Photos</a>
-            <a href="#" class="btn">Register Now</a>
-        </div>
-    `;
+    const rightButton = document.createElement('button');
+    rightButton.classList.add('scroll-button', 'right');
+    rightButton.innerHTML = '&rarr;';
+    testimonialsSlider.insertAdjacentElement('afterend', rightButton);
 
-    if (event.date >= today) {
-        upcomingEventsContainer.appendChild(eventCard);
-    } else {
-        pastEventsContainer.appendChild(eventCard);
-    }
+    leftButton.addEventListener('click', () => {
+        testimonialsSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    rightButton.addEventListener('click', () => {
+        testimonialsSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
 });

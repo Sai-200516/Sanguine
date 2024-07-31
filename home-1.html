@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanguine LPU</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="icon" href="source/Logo_s/Sanguine New Logo/Sanguine New Logo PNG/sanguneNew Logo.png" type="image/x-icon" />
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="heading">
+      <img src="source/Logo_s/Sanguine New Logo/Sanguine New Logo PNG/Sangune New Logo !.01.png" class="header_logo">
+      <h1>Sanguine</h1>
+    </a>
+    </div>
+    <nav class="top-nav">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="eclipse.html">Eclipse</a></li>
+        <li><a href="join-us.html">Join Us</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-navbar" onclick="toggleNav()">
+      <div class="mobile-navbar-bar"></div>
+      <div class="mobile-navbar-bar"></div>
+      <div class="mobile-navbar-bar"></div>
+    </div>
+    <div id="mobile-mySidenav" class="mobile-sidenav">
+      <a href="home.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="team.html">Team</a>
+      <a href="eclipse.html">Eclipse</a>
+      <a href="join-us.html">Join Us</a>
+      <a href="about.html">About</a>
+    </div>
+  </header>
+<!--Main Content Open-->
+<div id="video-background">
+    <video autoplay muted loop id="bg-video">
+        <source src="dj-video1.mp4" type="video/mp4">
+    </video>
+</div>
+
+<section id="events" class="section events-section">
+    <div class="container">
+        <h2>Upcoming Event</h2>
+        <div class="event-card">
+            <video autoplay muted loop class="event-video">
+                <source src="dj-video1.mp4" type="video/mp4">
+            </video>
+            <div class="event-details">
+                <h3>Eclipse DJ Night</h3>
+                <p>Join us for an electrifying night of music and dance at the Eclipse DJ Night. Date: August 25, 2024. Time: 7:00 PM - 11:00 PM. Venue: LPU Auditorium. Entry Fee: $20.</p>
+                <button onclick="window.location.href='registration.html'">Register Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section about-section">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Sanguine Club is a hub for creativity and innovation, bringing together individuals who are passionate about making a difference. Our club is dedicated to exploring new ideas, developing skills, and turning possibilities into reality through collaboration and continuous learning.</p>
+    </div>
+</section>
+
+<section id="join" class="section join-section">
+    <div class="container">
+        <h2>Join Us Today</h2>
+        <p>Join Sanguine Club today and set forth on a transformative journey of growth. Explore thrilling opportunities, ranging from marathons and EDM nights to talk shows and sports events. Become a part of our vibrant community dedicated to holistic development and leadership. Join hands with us as we shape a dynamic future where learning and excellence seamlessly converge. Your journey to personal and collective growth starts here—experience the synergy of diverse events and the power of a community committed to shaping a dynamic future.</p>
+        <button class="join-button">Join Us</button>
+    </div>
+</section>
+
+<section id="testimonials" class="section testimonials-section">
+    <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonials-slider">
+            <!-- Testimonials will be loaded here via JavaScript -->
+        </div>
+    </div>
+</section>
+
+<section id="subscribe" class="subscribe-section">
+    <div class="container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="subscribe-form">
+            <input type="text" id="subscribe-name" name="subscribe-name" placeholder="Your Name" required>
+            <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<section id="sponsors" class="section sponsors-section">
+    <div class="container">
+        <h2>Our Sponsors</h2>
+        <p>We are grateful to our sponsors for their generous support.</p>
+        <div class="sponsor-logos" id="sponsor-logos"></div>
+    </div>
+</section>
+
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <p>If you have any queries, feel free to reach out to us.</p>
+            <p>Email: sanguinelpu@gmail.com</p>
+            <p>Phone: +1 234 567 890</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <form id="contact-form">
+            <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+            <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
+            <textarea id="contact-message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+<!--Main Content Close-->
+  <!--Footer Open-->
+<br>  
+<section class="contact-section">
+  <h1>CONTACT US</h1>
+  <div class="contact-details">
+      <div class="contact-emails">
+          <p><span class="icon"><img src="source/Social_Media_Logo/Whatsapp.png" style="width: 20px; height: 20px;"></span> +91 7075005348</p>
+          <p><span class="icon">📧</span>sanguinelpu@gmail.com</p>
+          <p><span class="icon"><img src="source/Social_Media_Logo/website.png" style="width: 20px; height: 20px;"></span> sanguinelpu.in</p>
+      </div>
+      <div class="footer-logo">
+          <img src="source/Logo_s/Sanguine New Logo/Sanguine New Logo PNG/sanguneNew Logo.png " alt="Sanguine Logo" style="width: 200px; height: 200px;">
+      </div> 
+      <div class="contact-address">
+          <p><span class="icon">📍</span>Sanguine@LPU,<br>
+            13-209 LPU,Jalandhar - Delhi,<br>
+            Grand Trunk Rd, Phagwara,<br>
+            Punjab 144411</p>
+      </div>
+  </div>
+  
+  <div class="social-icons">
+    <a href="https://www.instagram.com/sanguine.lpu/" target="_blank"><img src="source/Social_Media_Logo/Instagram-1.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com/profile.php?id=100072289938389" target="_blank"><img src="source/Social_Media_Logo/Facebook-1.png "alt="Facebook"></a>
+    <a href="https://x.com/SanguineLPU" target="_blank"><img src="source/Social_Media_Logo/Twitter-1.png" alt="Twitter"></a>
+    <a href="https://www.linkedin.com/company/74932575/" target="_blank"><img src="source/Social_Media_Logo/Linkedin-1.png" alt="LinkedIn"></a>
+</div>
+</section>
+</main>
+<footer>
+<p>© Team Sanguine 2021-2024. All Rights Reserved.</p>
+</footer>
+<!--Footer Close-->
+<script src="js/home.js"></script>
+</body>
+
+</html>

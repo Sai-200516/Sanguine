@@ -1,208 +1,277 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
-    color: #ffffff;
-    background: #1b1b1b;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-.hero {
-    height: 100vh;
-    background: url('https://example.com/club-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
+    padding: 50px 20px;
 }
 
-.hero .container {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
-    border-radius: 10px;
-    animation: fadeIn 2s ease-in-out;
+.header h1 {
+    font-size: 3em;
+    margin: 0;
 }
 
-.hero-title {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    animation: slideInDown 1s ease-in-out;
+.header p {
+    font-size: 1.2em;
+    margin: 10px 0 20px 0;
 }
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    animation: slideInUp 1s ease-in-out;
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #e91e63;
+.nav ul li a {
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin: 0.5rem;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
-.btn:hover {
-    background-color: #ff4081;
+.nav ul li a:hover {
+    color: #ffa500;
 }
 
-.events {
-    padding: 2rem;
-    background: #282828;
+.section {
+    padding: 50px 20px;
     text-align: center;
 }
 
-.events h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.event-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.about-section, .events-section, .subscribe-section, .sponsors-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .event-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.event-video {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ffa500;
+}
+
+.event-details {
+    padding: 20px;
+}
+
+.event-details h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.event-details button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-details button:hover {
+    background-color: #ff4500;
+}
+
+.join-section p {
+    font-size: 1.2em;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.join-button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #ff4500;
+}
+
+.testimonials-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px 0;
+}
+
+.testimonials-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.testimonial {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.subscribe-section {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.subscribe-section form {
     display: flex;
     flex-direction: column;
-    background: #333;
-    padding: 1.5rem;
-    margin: 1rem;
-    border-radius: 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.subscribe-section form input {
+    padding: 10px;
     width: 80%;
     max-width: 400px;
-    animation: fadeInUp 1s ease-in-out;
-    transition: transform 0.3s ease;
-}
-
-.event-card:hover {
-    transform: scale(1.05);
-}
-
-.event-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.event-info {
-    text-align: left;
-}
-
-.event-info h3 {
-    margin-top: 0;
-    font-size: 1.75rem;
-}
-
-.event-info p {
-    margin: 0.5rem 0;
-}
-
-/* Countdown styles */
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 1rem 0;
-}
-
-.countdown div {
-    background: #444;
-    padding: 10px;
     border-radius: 5px;
-    text-align: center;
+    border: none;
+    font-size: 1em;
 }
 
-.countdown span {
-    display: block;
-    font-size: 0.8rem;
-    color: #e91e63;
-}
-
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-}
-
-.modal-content img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
+.subscribe-section form button {
+    background-color: #ffa500;
     color: #000;
-    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.subscribe-section form button:hover {
+    background-color: #ff4500;
 }
 
-@keyframes slideInDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 50px 20px;
 }
 
-@keyframes slideInUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
+.contact-details {
+    width: 45%;
+    margin-bottom: 20px;
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s;
 }
 
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
+.social-links a:hover {
+    color: #ffa500;
+}
 
-    .hero-subtitle {
-        font-size: 1rem;
-    }
+.contact-section form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    .btn {
-        font-size: 0.875rem;
-        padding: 0.5rem 1rem;
-    }
+.contact-section form input,
+.contact-section form textarea {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
 
-    .event-card {
-        width: 90%;
-    }
+.contact-section form button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section form button:hover {
+    background-color: #ff4500;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
 }

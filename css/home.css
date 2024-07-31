@@ -1,0 +1,325 @@
+:root{
+    --white:rgb(207, 185, 228);
+    --black: #020d19;
+    --light-black:#1a2930;
+    --gold:gold;
+  }
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-section, .events-section {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.sponsors-section {   
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 2s ease-out;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.sponsor-logos img {
+    width: 150px; /* Corrected dimensions */
+    height: 150px; /* Corrected dimensions */
+    border-radius: 10px;
+    object-fit: cover; /* Ensures images fit within the given dimensions */
+    margin: 0;
+    padding: 0;
+    border: 2px solid red; /* If border is needed for testing */
+}
+
+.about-event-section h2, .events-section h2, .join-section h2, .subscribe-section h2, .sponsors-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+    color: var(--gold);
+}
+
+.about-event-section p, .events-section p, .join-section p, .subscribe-section p, .sponsors-section p {
+    font-size: 1.2em;
+    animation: fadeIn 2s ease-out;
+    color: var(--white);
+}
+
+.event-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.event-video {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ffa500;
+}
+
+.event-details {
+    padding: 20px;
+    color: var(--white);
+}
+
+.event-details h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.event-details p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.event-details button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-details button:hover {
+    background-color: #ff4500;
+}
+.join-section h2{
+    color: var(--gold);
+}
+.join-section p {
+    font-size: 1.2em;
+    margin: 20px auto;
+    width: 80%;
+    color: var(--white);
+}
+
+.join-button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #ff4500;
+}
+
+.testimonials-section {
+    border-radius: 10px;
+    padding: 30px 0;
+    
+}
+.testimonials-section h2{
+    color: var(--gold);
+}
+
+.testimonials-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 80px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    justify-content: center;
+}
+
+.testimonial {
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 300px;
+    box-shadow: 0 0 15px #ccc;
+    flex-shrink: 0;
+    color: #fff;
+}
+.testimonial:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px var(--white);
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: var(--gold);
+}
+
+.testimonial img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+.contact-section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.contact-details-1 {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-details-1 h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+    color: var(--gold);
+    text-align: center;
+}
+
+.contact-details-1 p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-out;
+    color: var(--white);
+    text-align: center;
+}
+
+.contact-section-1 form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+.contact-section-1 form input,
+.contact-section-1 form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.contact-section-1 form button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section-1 form button:hover {
+    background-color: #ff4500;
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollSponsors {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.sponsor-logos.scrolling {
+    animation: scrollSponsors 20s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header p {
+        font-size: 1em;
+    }
+
+    .about-event-section h2, .events-section h2, .join-section h2, .subscribe-section h2, .sponsors-section h2 {
+        font-size: 2em;
+    }
+
+    .about-event-section p, .events-section p, .join-section p, .subscribe-section p, .sponsors-section p, .footer p {
+        font-size: 1em;
+    }
+
+    .event-card {
+        width: 80%;
+    }
+}

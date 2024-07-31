@@ -1,22 +1,11 @@
-document.getElementById('event-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const form = event.target;
+let videoIndex = 0;
+const videos = ['dj-video1.mp4', 'dj-video2.mp4', 'dj-video3.mp4'];
+const videoElement = document.getElementById('bg-video');
 
-    const email = form.email.value;
-    const name = form.name.value;
-    const dob = form.dob.value;
-    const gender = form.gender.value;
-    const regNo = form['reg-no'].value;
-    const phone = form.phone.value;
-    const course = form.course.value;
-    const section = form.section.value;
-    const eventSelected = form.event.value;
-    const comments = form.comments.value;
+function changeVideo() {
+    videoIndex = (videoIndex + 1) % videos.length;
+    videoElement.src = videos[videoIndex];
+    videoElement.play();
+}
 
-    if (email && name && dob && gender && regNo && phone && course && section && eventSelected) {
-        alert(`Thank you for registering, ${name}! You have successfully registered for the ${eventSelected}.`);
-        form.reset();
-    } else {
-        alert('Please fill out all required fields.');
-    }
-});
+videoElement.addEventListener('ended', changeVideo);
