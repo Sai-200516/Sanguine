@@ -4,14 +4,14 @@
     --light-black:#1a2930;
     --gold:gold;
   }
-
-#video-background {
-    position: fixed;
+  #video-background {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    overflow: hidden;
 }
 
 #bg-video {
@@ -19,16 +19,76 @@
     height: 100%;
     object-fit: cover;
 }
-
 .section {
     padding: 50px 20px;
     text-align: center;
 }
+.about-event-section ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 2s ease-out;
+}
 
-.about-section, .events-section {
-    margin-bottom: 20px;
+.about-event-section ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.event-card {
+    
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 20%;
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    animation: slideInFromBottom 1.5s ease-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.event-card #video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.event-card .event-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+    .event-card h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: var(--gold);
+    }
+
+    .event-card p {
+        font-size: 1em;
+        margin-bottom: 10px;
+        color: var(--white);
+    }
+
+.event-card button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-card button:hover {
+    background-color: #ff7f00;
 }
 .sponsors-section {   
     margin-bottom: 20px;
@@ -55,63 +115,19 @@
     border: 2px solid red; /* If border is needed for testing */
 }
 
-.about-event-section h2, .events-section h2, .join-section h2, .subscribe-section h2, .sponsors-section h2 {
+.about-event-section h2,.join-section h2, .subscribe-section h2, .sponsors-section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
     animation: fadeIn 1.5s ease-out;
     color: var(--gold);
 }
 
-.about-event-section p, .events-section p, .join-section p, .subscribe-section p, .sponsors-section p {
+.about-event-section p, .join-section p, .subscribe-section p, .sponsors-section p {
     font-size: 1.2em;
     animation: fadeIn 2s ease-out;
     color: var(--white);
 }
 
-.event-card {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    padding: 0;
-    width: 80%;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.event-video {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #ffa500;
-}
-
-.event-details {
-    padding: 20px;
-    color: var(--white);
-}
-
-.event-details h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: var(--gold);
-}
-
-.event-details p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.event-details button {
-    background-color: #ffa500;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.event-details button:hover {
-    background-color: #ff4500;
-}
 .join-section h2{
     color: var(--gold);
 }
@@ -320,6 +336,56 @@
     }
 
     .event-card {
-        width: 80%;
+        width: 100%;
+        padding: 2%;
     }
 }
+
+/* Coming Soon Page Open*/
+.hero-2 {
+    text-align: center;
+    background-color: var(--black);
+    color: white;
+    margin-top: -1.5em;
+  }
+  
+  .hero-2 h1 {
+    font-size: 2.5em;
+    margin-bottom: -0.2em;
+    color: var(--gold);
+    animation: slideInFromLeft 1.5s ease-out;
+  }
+  
+  .hero-2 p {
+    font-size: 1.2em;
+    margin-bottom: -1.5em;
+    color: var(--white);
+    animation: slideInFromRight 1.5s ease-out;
+  }
+  
+  .hero-2 .button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #ffcc00;
+    color: #010a16;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  @keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+  }
+  /* Coming Soon Page Close*/

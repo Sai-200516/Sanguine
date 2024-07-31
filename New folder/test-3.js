@@ -1,49 +1,53 @@
-const events = [
-    {
-        title: "Live Music Night",
-        date: "2024-08-10",
-        time: "8:00 PM",
-        description: "Enjoy a night of live music with local bands and artists.",
-        image: "../source/pexels-vishnurnair-1105666.jpg"
-    },
-    
-    {
-        title: "Past Event 1",
-        date: "2024-07-01",
-        time: "6:00 PM",
-        description: "This is a past event.",
-        image: "https://example.com/past-event-1.jpg"
-    },
-    {
-        title: "Past Event 2",
-        date: "2024-07-08",
-        time: "7:00 PM",
-        description: "This is another past event.",
-        image: "https://example.com/past-event-2.jpg"
-    }
-];
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scroll for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-const today = new Date().toISOString().split('T')[0];
+    // Contact form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message!');
+        this.reset();
+    });
 
-const upcomingEventsContainer = document.getElementById('upcoming-events');
-const pastEventsContainer = document.getElementById('past-events');
+    // Subscribe form submission
+    document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for subscribing!');
+        this.reset();
+    });
 
-events.forEach(event => {
-    const eventCard = document.createElement('div');
-    eventCard.classList.add('event-card');
-    eventCard.innerHTML = `
-        <img src="${event.image}" alt="${event.title}">
-        <div class="event-info">
-            <h3>${event.title}</h3>
-            <p>Date: ${new Date(event.date).toDateString()}</p>
-            <p>Time: ${event.time}</p>
-            <p>${event.description}</p>
-        </div>
-    `;
+    // Add sample testimonials dynamically
+    const testimonials = [
+        { name: "John Doe", text: "Amazing club with great events!" },
+        { name: "Jane Smith", text: "Had an awesome time at the DJ Night!" },
+        { name: "Sam Wilson", text: "A wonderful community to be part of." }
+    ];
+    const testimonialsSlider = document.querySelector('.testimonials-slider');
+    testimonials.forEach(testimonial => {
+        const div = document.createElement('div');
+        div.classList.add('testimonial');
+        div.innerHTML = `<p>${testimonial.text}</p><p>- ${testimonial.name}</p>`;
+        testimonialsSlider.appendChild(div);
+    });
 
-    if (event.date >= today) {
-        upcomingEventsContainer.appendChild(eventCard);
-    } else {
-        pastEventsContainer.appendChild(eventCard);
-    }
+    // Add sample sponsors dynamically
+    const sponsors = [
+        "sponsor1.png",
+        "sponsor2.png",
+        "sponsor3.png"
+    ];
+    const sponsorLogos = document.getElementById('sponsor-logos');
+    sponsors.forEach(sponsor => {
+        const img = document.createElement('img');
+        img.src = sponsor;
+        img.alt = `Sponsor Logo`;
+        sponsorLogos.appendChild(img);
+    });
 });
