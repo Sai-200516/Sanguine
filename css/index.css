@@ -22,10 +22,12 @@ body {
 header {
   background-color: var(--light-black);
   color: var(--white);
-  padding: -20px;
+  padding: -10px;
   display: flex;
   margin-top: -10px;
   margin-left: -10px;
+  margin-right:-10px ;
+  
   justify-content: space-between;
 }
 .header_logo {
@@ -88,7 +90,7 @@ header h1 {
 .mobile-sidenav {
   height: 0;
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 70px;
   right: 0;
@@ -113,13 +115,14 @@ header h1 {
   font-size: 25px;
   transition: 0.3s;
 }
-.mobile-sidenav .closebtn {
+/*
+.mobile-sidenav {
   position: absolute;
-  top: 0;
-  right: 25px;
+  top: 80px;
   font-size: 36px;
   margin-left: 50px;
 }
+  */
 /* Navigation Bar Close*/
 /*Footer Section open*/
 ul {

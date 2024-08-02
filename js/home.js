@@ -1,5 +1,5 @@
 let videoIndex = 0;
-const videos = ['dj-video1.mp4', 'dj-video2.mp4', 'dj-video3.mp4'];
+const videos = ['../source/Dj_Night.mp4', '../source/Dj_night_2.mp4'];
 const videoElement = document.getElementById('bg-video');
 
 function changeVideo() {
@@ -7,8 +7,8 @@ function changeVideo() {
     videoElement.src = videos[videoIndex];
     videoElement.play();
 }
-
 videoElement.addEventListener('ended', changeVideo);
+
 // JavaScript for dynamically loading testimonials
 document.addEventListener('DOMContentLoaded', function() {
     var testimonials = [
