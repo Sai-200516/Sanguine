@@ -28,6 +28,7 @@ urlpatterns = [
     path('eclipse/',eclipse,name="eclipse"),
     path('join-us/',join_us,name="join_us"),
     path('about/',about,name="about"),
+   
 ]
 
 if settings.DEBUG:
