@@ -444,3 +444,13 @@
 .contact-section-1 form textarea {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+.mission{
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+.mission h2{
+    color: var(--gold);
+}
+.mission p{
+    color: var(--white);
+}

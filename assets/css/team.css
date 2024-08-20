@@ -167,15 +167,15 @@ h2 {
 }
 
 .social-links a.github {
-  background-image: url('../media/Social_Media_Logo/Github-3.png');
+  background-image: url('../../media/Social_Media_Logo/Github-3.png');
 }
 
 .social-links a.linkedin {
-  background-image: url('../media/Social_Media_Logo/Linkedin.png');
+  background-image: url('../../media/Social_Media_Logo/Linkedin.png');
 }
 
 .social-links a.discord {
-  background-image: url('../media/Social_Media_Logo/Discord.png');
+  background-image: url('../../media/Social_Media_Logo/Discord.png');
 }
 
 /* Responsive Styles */

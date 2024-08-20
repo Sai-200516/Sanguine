@@ -14,7 +14,7 @@ const events = [
         date: "2024-09-25",
         time: "6:00 PM",
         description: "Enjoy a night of live music with local bands and artists.",
-        image: "../media/pexels-vishnurnair-1105666.jpg",
+        image: "../../media/pexels-vishnurnair-1105666.jpg",
         gallery: [
             "https://example.com/gallery/live-music-1.jpg",
             "https://example.com/gallery/live-music-2.jpg",

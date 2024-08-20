@@ -8,6 +8,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 //Team member open//
+const Mentor =[
+    {
+        imgSrc: "../media/members/DSC_0392.JPG",
+        name: "Karishma Verma",
+        position: "Faculity",
+        social: [
+            { platform: "linkedin", url: "#" },
+            { platform: "discord", url: "#" },
+            { platform: "github", url: "#" },
+            ],
+    },
+    {
+        imgSrc: "../media/members/111111111.jpeg",
+        name: "Tamanna Chadha",
+        position: "Founder",
+        social: [
+            { platform: "linkedin", url: "#" },
+            { platform: "discord", url: "#" },
+            { platform: "github", url: "#" },
+            ],
+    },
+
+    {
+        imgSrc: "../media/members/Abhinaw_Raj.jpg",
+        name: "Abhinaw Raj",
+        position: "Co-Founder",
+        social: [
+            { platform: "linkedin", url: "#" },
+            { platform: "discord", url: "#" },
+            { platform: "github", url: "#" },
+            ],
+    },{
+        imgSrc: "../media/members/thejus.JPG",
+        name: "ThEJUS",
+        position: "Chief-mentor",
+        social: [
+            { platform: "linkedin", url: "#" },
+            { platform: "discord", url: "#" },
+            { platform: "github", url: "#" },
+            ],
+    },
+
+    
+]
 const clubHeads = [
     {
         imgSrc: "../media/members/DSC_0392.JPG",
@@ -224,6 +268,10 @@ function createMember(member) {
     return memberDiv;
 }
 
+const MentorContainer = document.getElementById("mentor-container");
+Mentor.forEach(member => {
+    MentorContainer.appendChild(createMember(member));
+});
 const clubHeadsContainer = document.getElementById("club-heads-container");
 clubHeads.forEach(member => {
     clubHeadsContainer.appendChild(createMember(member));
