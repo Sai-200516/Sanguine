@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
 const Mentor =[
     {
         imgSrc: "../media/members/DSC_0392.JPG",
+        name: "Appikonda Sai",
+        position: "CEO",
+        social: [
+            { platform: "linkedin", url: "https://www.linkedin.com/in/sai2005/" },
+            { platform: "discord", url: "https://discordapp.com/users/1150473624092934254" },
+            { platform: "github", url: "https://github.com/sai-200516 " },
+        ],
+    },
+    {
+        imgSrc: "../media/members/DSC_0392.JPG",
         name: "Karishma Verma",
         position: "Faculity",
         social: [
@@ -39,30 +49,12 @@ const Mentor =[
             { platform: "discord", url: "#" },
             { platform: "github", url: "#" },
             ],
-    },{
-        imgSrc: "../media/members/thejus.JPG",
-        name: "ThEJUS",
-        position: "Chief-mentor",
-        social: [
-            { platform: "linkedin", url: "#" },
-            { platform: "discord", url: "#" },
-            { platform: "github", url: "#" },
-            ],
     },
 
     
 ]
 const clubHeads = [
-    {
-        imgSrc: "../media/members/DSC_0392.JPG",
-        name: "Appikonda Sai",
-        position: "CEO",
-        social: [
-            { platform: "linkedin", url: "https://www.linkedin.com/in/sai2005/" },
-            { platform: "discord", url: "https://discordapp.com/users/1150473624092934254" },
-            { platform: "github", url: "https://github.com/sai-200516 " },
-        ],
-    },
+   
     {
         imgSrc: "../media/members/Agam_Jindal.jpg",
         name: "Agam Jindal",
