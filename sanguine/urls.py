@@ -26,7 +26,7 @@ urlpatterns = [
     path('',home,name="home"),
     path('events/',events,name="events"),
     path('team/',team,name="team"),
-    path('join-us/', join_us_view, name='join_us'),
+     path('join-us/', join_us_view, name='join_us'),
     path('eclipse/',eclipse,name="eclipse"),
    
     path('about/',about,name="about"),

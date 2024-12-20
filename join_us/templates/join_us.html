@@ -17,7 +17,7 @@
   <header>
     <a href="#" class="heading">
       <img src="../media/Logo_s/Sanguine New Logo/Sanguine New Logo PNG/Sangune New Logo !.01.png" class="header_logo">
-      <h1>Spirit</h1>
+      <h1>Sanguine</h1>
     </a>
     </div>
     <nav class="top-nav">
@@ -67,7 +67,7 @@
 <!--Coming Soon Page Close-->
 
 <section id="form-section" class="section form-section">
-    <form id="join-form" method="POST" action="{% url 'join_us' %}" enctype="multipart/form-data"> {% csrf_token %}
+    <form id="join-form" autocomplete="on" method="POST" action="{% url 'join_us' %}">{% csrf_token %}
         <label for="email">Email *</label>
         <input type="email" id="email" name="email" required>
 
@@ -125,9 +125,9 @@
             <option value="4th">4th</option>
         </select>
         <label for="experience">Any Previous work Experience</label>
-        <input type="text" id="experience" name="experience" required>
+        <input type="text" id="experience" name="experience">
         <label for="referred-by">Referred by *</label>
-        <input type="text" id="referred-by" name="referred-by" >
+        <input type="text" id="referred-by" name="referred-by" required>
 
         <button type="submit">Submit</button>
     </form>

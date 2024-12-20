@@ -1,19 +1,24 @@
-/*$(document).ready(function() {
-    // Form validation
-    $('#join-form').submit(function(event) {
-        let isValid = true;
+document.getElementById('join-form').onsubmit = function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
 
-        // Check if all mandatory fields are filled
-        $('input[required]').each(function() {
-            if ($(this).val() === '') {
-                alert('Please fill out the ' + $(this).prev().text() + ' field.');
-                isValid = false;
-                return false; // Stop checking further fields
+    fetch("{% url 'join_us' %}", {
+        method: "POST",
+        headers: {
+            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: formData
+    }).then(response => {
+        if (response.ok) {
+            if (confirm("Are You Sure Want To Submit The form")) {
+                alert(`Thank you for registering!`);
+                form.reset();
+            } else {
+                alert(`Form Was Not Submitted`);
             }
-        });
-
-        if (!isValid) {
-            event.preventDefault();  // Prevent form submission if not valid
+            window.location.href = 'success_url';
+        } else {
+            alert('Please fill out all required fields.');
         }
     });
-});*/
+};
