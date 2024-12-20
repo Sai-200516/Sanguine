@@ -18,15 +18,17 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import home,events,team,eclipse,join_us,about
+from .views import home,events,team,eclipse,about
+from join_us.views import join_us_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home,name="home"),
     path('events/',events,name="events"),
     path('team/',team,name="team"),
+    path('join-us/', join_us_view, name='join_us'),
     path('eclipse/',eclipse,name="eclipse"),
-    path('join-us/',join_us,name="join_us"),
+   
     path('about/',about,name="about"),
    
 ]

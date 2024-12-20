@@ -1,0 +1,174 @@
+{% load static%}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join us-Sanguine LPU</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/join-us.css' %}">
+  <link rel="icon" href="../media/Logo_s/Sanguine New Logo/Sanguine New Logo PNG/sanguneNew Logo.png" type="image/x-icon" />
+  <script src="{% static 'js/index.js' %}"></script>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="heading">
+      <img src="../media/Logo_s/Sanguine New Logo/Sanguine New Logo PNG/Sangune New Logo !.01.png" class="header_logo">
+      <h1>Spirit</h1>
+    </a>
+    </div>
+    <nav class="top-nav">
+      <ul>  
+        <li><a href="../">Home</a></li>
+        <li><a href="../events/">Events</a></li>
+        <li><a href="../team/">Team</a></li>
+        <li><a href="../eclipse/">Eclipse</a></li>
+        <li><a href="../join-us/">Join Us</a></li>
+        <li><a href="../about/">About</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-navbar" onclick="toggleNav()">
+      <div class="mobile-navbar-bar"></div>
+      <div class="mobile-navbar-bar"></div>
+      <div class="mobile-navbar-bar"></div>
+    </div>
+    <div id="mobile-mySidenav" class="mobile-sidenav">
+      <a href="../">Home</a>
+      <a href="../events/">Events</a>
+      <a href="../team/">Team</a>
+      <a href="../eclipse/">Eclipse</a>
+      <a href="../join-us/">Join Us</a>
+      <a href="../about/">About</a>
+    </div>
+  </header>
+<!--Main Content Open-->
+<section class="header-2">
+    <h1>Spirit Recruitment - Registration</h1>
+    <p>Join "Team Spirit" and be part of something amazing!</p>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/company/74932575/" target="_blank"><img src="../media/Social_Media_Logo/Linkedin.png" style="width: 30px; height: 30px;"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100072289938389" target="_blank"><img src="../media/Social_Media_Logo/Facebook.png" style="width: 30px; height: 30px;"></i></a>
+        <a href="https://www.instagram.com/sanguine.lpu/" target="_blank"><img src="../media/Social_Media_Logo/Instagram.png" style="width: 30px; height: 30px;"></i></a>
+        <a href="https://whatsapp.com/channel/0029VaZR3yAIN9ipmPWcKr0f" target="_blank"><img src="../media/Social_Media_Logo/Whatsapp-1.png" style="width: 30px; height: 30px;"></i></a>
+        <a href="https://x.com/SanguineLPU" target="_blank"><img src="../media/Social_Media_Logo/Twitter-1.png" style="width: 30px; height: 30px;"></i></a>
+        <a href="https://www.youtube.com/@sanguinelpu890" target="_blank"><img src="../media/Social_Media_Logo/Youtube.png" style="width: 30px; height: 30px;"></i></a>
+
+    </div>
+</section>
+<!--Coming Soon Page Open-->
+<!--
+<section class="hero-1">
+    <h1> Coming Soon ......</h1>
+    <p>Take a look at our memorable past events through photos</p>
+</section>-->
+<!--Coming Soon Page Close-->
+
+<section id="form-section" class="section form-section">
+    <form id="join-form" method="POST" action="{% url 'join_us' %}" enctype="multipart/form-data"> {% csrf_token %}
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="gender">Gender *</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="reg-no">Registration No. *</label>
+        <input type="text" id="reg-no" name="reg-no" required>
+
+        <label for="phone">Whatsapp No *</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+        <label for="course">Course/Program (Ex: B-tech (CSE)) *</label>
+        <input type="text" id="course" name="course" required>
+
+        <label for="section">Section (Ex: K20BN) *</label>
+        <input type="text" id="section" name="section" required>
+
+        <label for="personality">Are You *</label>
+        <select id="personality" name="personality" required>
+            <option value="Introvert">Introvert</option>
+            <option value="Extrovert">Extrovert</option>
+            <option value="Ambivert">Ambivert</option>
+        </select>
+
+        <label for="interested_domain">Interested Domain :</data> *</label>
+        <select id="interested_domain" name="interested_domain" required>
+            <option value="Content Writers">Content Writers</option>
+            <option value="Public Speaking">Public Speaking</option>
+            <option value="Technical">Technical</option>
+            <option value="Event Management">Event Management</option>
+            <option value="Marketing and Promotions">Marketing and Promotions</option>
+            <option value="Graphic Designers">Graphic Designers</option>
+            <option value="Web Developers">Web Developers</option>
+            <option value="Web Development">Video Editor</option>
+            <option value="Human Resources">Photography</option>
+            <option value="Other">Fine Arts Media</option>
+        </select>
+        <label for="location">Location *</label>
+        <select id="location" name="location" required>
+            <option value="Hosteller">Hosteller</option>
+            <option value="Day Scholar">Day Scholar</option>
+        </select>
+        <label for="year">Year *</label>
+        <select id="year" name="year" required>
+            <option value="1st">1st</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
+        </select>
+        <label for="experience">Any Previous work Experience</label>
+        <input type="text" id="experience" name="experience" required>
+        <label for="referred-by">Referred by *</label>
+        <input type="text" id="referred-by" name="referred-by" >
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!--Main Content Close-->
+  <!--Footer Open-->
+<br>  
+<section class="contact-section">
+  <h1>CONTACT US</h1>
+  <div class="contact-details">
+      <div class="contact-emails">
+          <p><span class="icon"><img src="../media/Social_Media_Logo/Whatsapp.png" style="width: 20px; height: 20px;"></span> +91 7075005348</p>
+          <p><span class="icon">📧</span>spirit.lpu@gmail.com</p>
+          <p><span class="icon"><img src="../media/Social_Media_Logo/website.png" style="width: 20px; height: 20px;"></span> spirit.org.in</p>
+      </div>
+      <div class="footer-logo">
+          <img src="../media/Logo_s/Sanguine New Logo/Sanguine New Logo PNG/sanguneNew Logo.png " alt="Sanguine Logo" style="width: 200px; height: 200px;">
+      </div> 
+      <div class="contact-address">
+          <p><span class="icon">📍</span>Spirit@LPU,<br>
+            13-209 LPU,Jalandhar - Delhi,<br>
+            Grand Trunk Rd, Phagwara,<br>
+            Punjab 144411</p>
+      </div>
+  </div>
+  
+  <div class="social-icons">
+    <a href="https://www.instagram.com/sanguine.lpu/" target="_blank"><img src="../media/Social_Media_Logo/Instagram-1.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com/profile.php?id=100072289938389" target="_blank"><img src="../media/Social_Media_Logo/Facebook-1.png "alt="Facebook"></a>
+    <a href="https://x.com/SanguineLPU" target="_blank"><img src="../media/Social_Media_Logo/Twitter-1.png" alt="Twitter"></a>
+    <a href="https://www.linkedin.com/company/74932575/" target="_blank"><img src="../media/Social_Media_Logo/Linkedin-1.png" alt="LinkedIn"></a>
+</div>
+</section>
+</main>
+<footer>
+<p>© Team Spirit 2021-2024. All Rights Reserved.</p>
+</footer>
+<!--Footer Close-->
+<script src="{% static 'js/join-us.js' %}"></script>
+</body>
+
+</html>
+{% endblock content %}

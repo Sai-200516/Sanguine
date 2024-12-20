@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #our Apps
+    'join_us',
+
 ]
 
 MIDDLEWARE = [
@@ -72,13 +75,17 @@ WSGI_APPLICATION = 'sanguine.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+"""
+MONGO_URI = 'mongodb://localhost:27017'
+MONGO_DB_NAME = 'Spirit'
+
 
 
 # Password validation
@@ -125,3 +132,11 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#Email Backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'sanguinelpu@gmail.com'
+EMAIL_HOST_PASSWORD = 'coyrvrnafqvabjdm'
+#SSl 

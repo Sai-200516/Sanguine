@@ -16,8 +16,6 @@ def team(request):
 def eclipse(request):
     return render(request,"eclipse.html")
 
-def join_us(request):
-    return render(request,"join-us.html")
 
 def about(request):
     return render(request,"about.html")

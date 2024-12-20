@@ -1,0 +1,2 @@
+import pymongo
+db_url="mongodb://localhost:27017"
